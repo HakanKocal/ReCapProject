@@ -42,7 +42,11 @@ namespace Business.Constans
         public static string CustomerUpdated = "Customer Başarıyla Güncellendi";
         public static string CustomerListed = "Customer Listelendi";
 
+        public static string ImageDeleted = "Resim Başarıyla Silindi";
 
+        public static string ImageLimitExceded = "Limit Aşıldı";
 
+        public static string ImageUpdate = "Resim Başarıyla Güncellendi";
+        public static string ImageAdded = "Resim Başarıyla EKlendi";
     }
 }
