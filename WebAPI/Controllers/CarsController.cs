@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Business.Abstract;
 using Entities.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +20,7 @@ namespace WebAPI.Controllers
             _carService = carService;
         }
         [HttpPost("add")]
+
         public IActionResult Add(Car car)
         {
             var result = _carService.Add(car);
@@ -30,6 +32,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("getall")]
+        [Authorize(Roles ="Product.List")]
         public IActionResult GetAll()
         {
             var result = _carService.GetAll();
