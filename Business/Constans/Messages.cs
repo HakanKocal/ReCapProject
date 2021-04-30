@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Business.Constans
@@ -48,5 +49,7 @@ namespace Business.Constans
 
         public static string ImageUpdate = "Resim Başarıyla Güncellendi";
         public static string ImageAdded = "Resim Başarıyla EKlendi";
+
+        public static string AuthorizationDenied = "Yekiniz Yok";
     }
 }

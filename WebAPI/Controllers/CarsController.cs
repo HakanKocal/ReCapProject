@@ -20,7 +20,7 @@ namespace WebAPI.Controllers
             _carService = carService;
         }
         [HttpPost("add")]
-
+       //[Authorize(Roles = "Product.List")]
         public IActionResult Add(Car car)
         {
             var result = _carService.Add(car);
@@ -32,7 +32,6 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("getall")]
-        [Authorize(Roles ="Product.List")]
         public IActionResult GetAll()
         {
             var result = _carService.GetAll();
